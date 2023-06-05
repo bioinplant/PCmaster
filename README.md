@@ -14,6 +14,9 @@ PCmaster_seg: Plant Cell master for cell segment of embyro/leaf/...
 ### PCmaster_anno ###
 ### Version 1.0.0 ###
 ---
+#### [2023-06-05] ####
+#### You'd better put your ipynb, "PCmaster/PCmaster_anno/PCmaster_anno_0_copy1.py" and "PCmaster/PCmaster_anno/plant_marker_gene_list.txt" into the same folder. ####
+---   
 #### [2023-06-04] ####
 #### You can install the conda environment with the file "PCmaster/PCmaster_anno/PCmaster_anno_requirements.txt" and the terminal command "conda create --name PCmaster_anno --file PCmaster_anno_requirements.txt". ####
 #### This installation method is recommended. ####
