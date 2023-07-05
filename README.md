@@ -17,7 +17,7 @@ PCmaster_seg: Plant Cell master for cell segment of embyro/leaf/...
 #### [2023-07-05] ####
 #### Currently, it is recommended to follow the guidance in PCmaster_anno_0_guide_1_mainly_in_Chinese.docx and install the environment from scratch. ####
 #### Installing via requirements.txt seems to have compatibility issues at the moment. (It seems to be affected by conda version and network environment, too.) ####
-#### Installing the compressed file PCmaster_anno_test_1.tar.gz via [this link](https://pan.baidu.com/s/1p1im8oCfebzGjzptk7PSmQ?pwd=nnvr) is the most convenient way, but there may also be compatibility issues. ####
+#### Installing through the compressed file PCmaster_anno_test_1.tar.gz (There are also guide in PCmaster_anno_0_guide_1_mainly_in_Chinese.docx.) via [this link](https://pan.baidu.com/s/1p1im8oCfebzGjzptk7PSmQ?pwd=nnvr) is the most convenient way, but there may also be compatibility issues. ####
 ---
 #### [2023-06-05] ####
 #### It is recommended to put your ipynb, "PCmaster/PCmaster_anno/PCmaster_anno_0_copy1.py" and "PCmaster/PCmaster_anno/plant_marker_gene_list.txt" into the same folder. ####
