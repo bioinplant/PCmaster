@@ -14,6 +14,9 @@ PCmaster_seg: Plant Cell master for cell segment of embyro/leaf/...
 ### PCmaster_anno ###
 ### Version 1.0.0 ###
 ---
+#### [2023-08-15] ####
+#### PCmaster_anno_0_23_8_15.py and plant_marker_gene_list_23_8_15.txt have been uploaded. You can experience improved functions by replacing old contents in original files with new contents.####
+---
 #### [2023-07-05] ####
 #### Currently, it is recommended to follow the guidance in PCmaster_anno_0_guide_1_mainly_in_Chinese.docx and install the environment from scratch. ####
 #### Installing via requirements.txt seems to have compatibility issues at the moment. (It seems to be affected by conda version and network environment, too.) ####
