@@ -15,10 +15,10 @@ PCmaster_seg: Plant Cell master for cell segment of embyro/leaf/...
 ### Version 1.0.0 ###
 ---
 #### [2023-09-11] ####
-#### PCmaster_anno_0_23_9_11.py has been uploaded. The default 'cluster_n_neighbors' has been changed from 20 to 10, which is the same as scanpy. And the function of auto annotation with reference datasets has been improved. You can experience improved functions by replacing old contents in original files with new contents.####
+#### PCmaster_anno_0_23_9_11.py has been uploaded. The default 'cluster_n_neighbors' has been changed from 20 to 10, which is the same as scanpy. And the function of auto annotation with reference datasets has been improved. You can experience improved functions by replacing old contents in original files with new contents.  ####
 ---
 #### [2023-08-15] ####
-#### PCmaster_anno_0_23_8_15.py and plant_marker_gene_list_23_8_15.txt have been uploaded. You can experience improved functions by replacing old contents in original files with new contents.####
+#### PCmaster_anno_0_23_8_15.py and plant_marker_gene_list_23_8_15.txt have been uploaded. You can experience improved functions by replacing old contents in original files with new contents.  ####
 ---
 #### [2023-07-05] ####
 #### Currently, it is recommended to follow the guidance in PCmaster_anno_0_guide_1_mainly_in_Chinese.docx and install the environment from scratch. ####
