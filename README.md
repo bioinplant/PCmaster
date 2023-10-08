@@ -17,16 +17,44 @@ PCmaster_seg: Plant Cell master for cell segment of embyro/leaf/...
 #### [2023-10-08] ####
 #### Installation with TOSICA  ####
 ```
+# Please install conda first
 conda create -n pcmaster_anno_0 --offline
 conda activate pcmaster_anno_0
 conda install -c conda-forge python=3.8 scanpy
 conda install pytorch=1.7.1 torchvision=0.8.2 torchaudio=0.7.2 cudatoolkit=10.1 -c pytorch
-# download TOSICA-main from https://github.com/JackieHanLab/TOSICA
+# Download TOSICA-main from https://github.com/JackieHanLab/TOSICA
 cd TOSICA-main
 pip install .
 pip install d2l jupyter==1.0.0
 python -m ipykernel install --user --name=pcmaster_anno_0 --display-name='Environment (pcmaster_anno_0)'
 jupyter-notebook --ip=xxx.yyy.zzz.aaa --no-browser
+# Open the web browser and go to http://xxx.yyy.zzz.aaa:cccc or https://xxx.yyy.zzz.aaa:cccc
+```
+#### Installation with docker  ####
+```
+# Please install docker first
+# Download the docker image file from https://drive.google.com/file/d/1236fiXdtY4WwtrU3zPVqE-eJcJf5m5vI/view?usp=drive_link
+docker load --input bioinplant_pcmaster_anno_0_23_9_28.tar
+docker images
+docker run -it --name pcmaster_anno_0_23_9_28 --gpus all -p 8996:8997 42beba728324 /bin/bash
+jupyter-notebook --ip=xxx.yyy.zzz.aaa --no-browser
+# Open the web browser and go to http://xxx.yyy.zzz.aaa:8996 or https://xxx.yyy.zzz.aaa:8996
+```
+#### Simple usage (auto annotation with ref datasets and deep learning models)  ####
+```
+# Other files such as PCmaster_anno_0_23_10_3.py, plant_marker_gene_list.txt and the pth file of resnet in this git project are also needed
+# More details in PCmaster_anno_0_guide_1_mainly_in_Chinese.docx
+# A new example:
+# PCmaster_anno_0_spatial_resnet_all_genes_slice367_ref_slice_1_test_23_10_8.ipynb
+with open('PCmaster_anno_0_23_10_3.py','r') as f:
+    exec(f.read())
+pcma = PCmaster_anno_0()
+pcma.auto_annotation_with_deep_learning_0(original_obj=the_original_obj,gpu_code = gpu_code_n,
+                                          learning_rate=the_learning_rate,
+                                          epochs=the_epochs,
+                                          batch_size = the_batch_size,dropout = the_dropout,
+                                          num_workers = the_num_workers
+                                          )
 ```
 ---
 #### [2023-09-11] ####
