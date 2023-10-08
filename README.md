@@ -14,6 +14,20 @@ PCmaster_seg: Plant Cell master for cell segment of embyro/leaf/...
 ### PCmaster_anno ###
 ### Version 1.0.0 ###
 ---
+#### [2023-10-08] ####
+####   ####
+```
+conda create -n tosica --offline
+conda activate tosica
+conda install -c conda-forge python=3.8 scanpy
+conda install pytorch=1.7.1 torchvision=0.8.2 torchaudio=0.7.2 cudatoolkit=10.1 -c pytorch
+cd TOSICA-main
+pip install .
+pip install d2l jupyter==1.0.0
+python -m ipykernel install --user --name=tosica --display-name='Environment (tosica)'
+jupyter-notebook --ip=xxx.yyy.zzz.aaa --no-browser
+```
+---
 #### [2023-09-11] ####
 #### PCmaster_anno_0_23_9_11.py has been uploaded. The default 'cluster_n_neighbors' has been changed from 20 to 10, which is the same as scanpy. And the function of auto annotation with reference datasets has been improved. You can experience improved functions by replacing old contents in original files with new contents.  ####
 ---
