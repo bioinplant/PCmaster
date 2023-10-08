@@ -110,6 +110,6 @@ Please note that the latest version of the code may cause some undetected bugs.
 SCAPP is the old version of PCmaster_anno.    
 https://github.com/shlin0415/SCAPP    
 
-Sincerely thanks to the contributors of python packages such as d2l, doubletdetection, harmonypy, numpy, openmmlab, pandas, scanpy, seaborn, scrublet, scikit-learn, torch, tosica, etc.    
+Sincerely thanks to the contributors of packages such as d2l, doubletdetection, harmonypy, numpy, openmmlab, pandas, scanpy, seaborn, scrublet, scikit-learn, singler, torch, tosica, etc.    
 
 If you have some questions, please send email to 12216017@zju.edu.cn.    
