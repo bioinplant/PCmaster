@@ -37,6 +37,10 @@ jupyter-notebook --ip=xxx.yyy.zzz.aaa --no-browser
 docker load --input bioinplant_pcmaster_anno_0_23_9_28.tar
 docker images
 docker run -it --name pcmaster_anno_0_23_9_28 --gpus all -p 8996:8997 bioinplant/pcmaster_anno_0_23_9_28 /bin/bash
+
+ls
+cd home
+conda activate pcmaster_anno_0
 jupyter-notebook --ip=xxx.yyy.zzz.aaa --no-browser
 # Open the web browser and go to http://xxx.yyy.zzz.aaa:8996 or https://xxx.yyy.zzz.aaa:8996
 ```
