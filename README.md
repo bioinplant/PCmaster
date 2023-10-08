@@ -43,7 +43,8 @@ jupyter-notebook --ip=xxx.yyy.zzz.aaa --no-browser
 #### Simple usage (auto annotation with ref datasets and deep learning models)  ####
 ```
 # Other files such as PCmaster_anno_0_23_10_3.py, plant_marker_gene_list.txt and the pth file of resnet in this git project are also needed
-# More details in PCmaster_anno_0_guide_1_mainly_in_Chinese.docx
+# More guides in PCmaster_anno_0_guide_1_mainly_in_Chinese.docx
+# More details in PCmaster_anno_0_spatial_resnet_all_genes_slice367_ref_slice_1_test_23_10_8-Copy1.ipynb
 with open('PCmaster_anno_0_23_10_3.py','r') as f:
     exec(f.read())
 pcma = PCmaster_anno_0()
