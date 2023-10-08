@@ -54,6 +54,33 @@ pcma.auto_annotation_with_deep_learning_0(original_obj=the_original_obj,gpu_code
                                           num_workers = the_num_workers
                                           )
 ```
+```
+On the test dataset
+Accuracy: 0.9025
+Macro Precision: 0.901893589299713
+Macro Recall: 0.9025
+Macro F1 Score: 0.9016473881006721
+
+On a dataset which is not involved in model training
+Accuracy: 0.6825028968713789
+Macro Precision: 0.7359756337721365
+Macro Recall: 0.6869098209694935
+Macro F1 Score: 0.6703407567251473
+
+The score is higher than SingleR
+[1] "obj"
+An object of class Seurat 
+5859 features across 7462 samples within 1 assay 
+Active assay: RNA (5859 features, 0 variable features)
+[1] 100
+[1] "count/length(big_df$true)"
+[1] 0.5844504
+
+```
+#### Cell type true ####
+![image](https://github.com/bioinplant/PCmaster/blob/main/celltype-true.png)
+#### Cell type pred ####
+![image](https://github.com/bioinplant/PCmaster/blob/main/celltype-pred.png)
 ---
 #### [2023-09-11] ####
 #### PCmaster_anno_0_23_9_11.py has been uploaded. The default 'cluster_n_neighbors' has been changed from 20 to 10, which is the same as scanpy. And the function of auto annotation with reference datasets has been improved. You can experience improved functions by replacing old contents in original files with new contents.  ####
