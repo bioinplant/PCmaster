@@ -15,16 +15,17 @@ PCmaster_seg: Plant Cell master for cell segment of embyro/leaf/...
 ### Version 1.0.0 ###
 ---
 #### [2023-10-08] ####
-####   ####
+#### Installation with TOSICA  ####
 ```
-conda create -n tosica --offline
-conda activate tosica
+conda create -n pcmaster_anno_0 --offline
+conda activate pcmaster_anno_0
 conda install -c conda-forge python=3.8 scanpy
 conda install pytorch=1.7.1 torchvision=0.8.2 torchaudio=0.7.2 cudatoolkit=10.1 -c pytorch
+# download TOSICA-main from https://github.com/JackieHanLab/TOSICA
 cd TOSICA-main
 pip install .
 pip install d2l jupyter==1.0.0
-python -m ipykernel install --user --name=tosica --display-name='Environment (tosica)'
+python -m ipykernel install --user --name=pcmaster_anno_0 --display-name='Environment (pcmaster_anno_0)'
 jupyter-notebook --ip=xxx.yyy.zzz.aaa --no-browser
 ```
 ---
@@ -51,6 +52,6 @@ Please note that the latest version of the code may cause some undetected bugs.
 SCAPP is the old version of PCmaster_anno.    
 https://github.com/shlin0415/SCAPP    
 
-Sincerely thanks to the contributors of python packages such as d2l, doubletdetection, harmonypy, numpy, pandas, scanpy, seaborn, scrublet, scikit-learn, torch, etc.    
+Sincerely thanks to the contributors of python packages such as d2l, doubletdetection, harmonypy, numpy, openmmlab, pandas, scanpy, seaborn, scrublet, scikit-learn, torch, tosica, etc.    
 
 If you have some questions, please send email to 12216017@zju.edu.cn.    
