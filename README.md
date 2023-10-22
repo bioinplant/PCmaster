@@ -14,6 +14,61 @@ PCmaster_seg: Plant Cell master for cell segment of embyro/leaf/...
 ### PCmaster_anno ###
 ### Version 1.0.0 ###
 ---
+#### [2023-10-22] ####
+#### PCmaster_anno_0_23_10_22.py has been uploaded. The function of calculating macro F1-score has been added. And the location of trainDataset and validDataset has been improved. You can experience improved functions by replacing old contents in original files with new contents.  ####
+#### Complete installation ####
+```
+# The versions may not be exactly the same.
+# Please install conda first
+conda create -n PCmaster_anno_0 --offline
+conda activate PCmaster_anno_0
+conda install python=3.8
+
+pip install jupyter d2l torch torchvision
+# jupyter                   1.0.0                    pypi_0    pypi
+# d2l                       0.17.6                   pypi_0    pypi
+# torch                     1.13.1                   pypi_0    pypi
+# torchvision               0.14.1                   pypi_0    pypi
+
+conda install -c conda-forge scanpy
+# scanpy                    1.9.2              pyhd8ed1ab_0    conda-forge
+
+python -m ipykernel install --user --name=PCmaster_anno_0 --display-name='Environment (PCmaster_anno_0)'
+conda install -c conda-forge pytables
+# pytables                  3.7.0            py38hf19a122_1
+
+conda install -c conda-forge leidenalg
+# leidenalg                 0.9.1            py38h8dc9893_0    conda-forge
+
+conda install -c bioconda harmonypy
+# harmonypy                 0.0.6              pyhdfd78af_0    bioconda
+
+pip install optuna -i https://pypi.tuna.tsinghua.edu.cn/simple
+# optuna                   3.1.0
+
+pip install optuna-dashboard -i https://pypi.tuna.tsinghua.edu.cn/simple
+# optuna-dashboard         0.8.1
+
+pip install plotly -i https://pypi.tuna.tsinghua.edu.cn/simple
+# plotly                   5.13.1
+
+conda install -c bioconda -c conda-forge scrublet
+# scrublet                  0.2.3              pyh5e36f6f_1    bioconda
+
+pip install doubletdetection
+# doubletdetection         4.2
+
+conda install -c r -c conda-forge r-irkernel
+# r-irkernel                1.3               r40hc72bb7e_0    conda-forge
+
+conda install -c conda-forge conda-pack
+# conda-forge/noarch::conda-pack-0.7.0-pyh6c4a22f_0
+
+# maybe needed
+# pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+```
+---
 #### [2023-10-08] ####
 #### Installation with TOSICA  ####
 ```
