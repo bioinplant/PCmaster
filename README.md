@@ -14,6 +14,9 @@ PCmaster_seg: Plant Cell master for cell segment of embyro/leaf/...
 ### PCmaster_anno ###
 ### Version 1.0.0 ###
 ---
+#### [2023-11-08] ####
+#### PCmaster_anno_0_23_11_8.py has been uploaded. Code annotation is improved.  ####
+---
 #### [2023-10-22] ####
 #### PCmaster_anno_0_23_10_22.py has been uploaded. The function of calculating macro F1-score has been added. And the location of trainDataset and validDataset has been improved. You can experience improved functions by replacing old contents in original files with new contents.  ####
 #### Complete installation ####
