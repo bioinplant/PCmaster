@@ -83,7 +83,7 @@ pcma.to_annotation_0(anndata=the_adata,organ='seed',species='Oryza Sativa',
                     )
 ```
 #### Annotation with the marker gene list ####
-![image](https://github.com/bioinplant/PCmaster/blob/main/PCmaster_anno/celltype-pred.png)
+![image](https://github.com/bioinplant/PCmaster/blob/main/PCmaster_anno/anno_re_using_marker_gene_list.png)
 
 ---
 #### [2023-11-08] ####
