@@ -13,6 +13,78 @@ PCmaster_seg: Plant Cell master for cell segment of embyro/leaf/...
 #### ####
 ### PCmaster_anno ###
 ### Version 1.0.0 ###
+
+---
+#### [2023-11-21] ####
+#### Simple usage (auto annotation with ref datasets and deep learning models)  ####
+```
+# Other files such as PCmaster_anno_0_23_10_3.py, plant_marker_gene_list.txt and the pth file of resnet in this git project are also needed
+# More guides in PCmaster_anno_0_guide_1_mainly_in_Chinese.docx
+# More details in PCmaster_anno_0_spatial_resnet_all_genes_slice367_ref_slice_1_test_23_10_8-Copy1.ipynb
+# one example of original_obj:
+# AnnData object with n_obs × n_vars = 13713 × 10960
+# In original_obj.obs, 'ref_test_label', 'cellname' and 'celltype' are needed.
+# For ref data, 'ref_test_label' is 'ref'.
+# For test data, 'ref_test_label' is 'test', 'celltype' is 'Unknown'.
+# The following code will train a model based on ref data, and then annotate test data based on the model.
+
+with open('PCmaster_anno_0_23_10_3.py','r') as f:
+    exec(f.read())
+pcma = PCmaster_anno_0()
+pcma.auto_annotation_with_deep_learning_0(original_obj=the_original_obj,gpu_code = gpu_code_n,
+                                          learning_rate=the_learning_rate,
+                                          epochs=the_epochs,
+                                          batch_size = the_batch_size,dropout = the_dropout,
+                                          num_workers = the_num_workers
+                                          )
+```
+```
+On the test dataset
+Accuracy: 0.9025
+Macro Precision: 0.901893589299713
+Macro Recall: 0.9025
+Macro F1 Score: 0.9016473881006721
+
+On a dataset which is not involved in model training
+Accuracy: 0.6825028968713789
+Macro Precision: 0.7359756337721365
+Macro Recall: 0.6869098209694935
+Macro F1 Score: 0.6703407567251473
+
+The score is higher than SingleR
+[1] "obj"
+An object of class Seurat 
+5859 features across 7462 samples within 1 assay 
+Active assay: RNA (5859 features, 0 variable features)
+[1] 100
+[1] "count/length(big_df$true)"
+[1] 0.5844504
+
+```
+#### Cell type true ####
+![image](https://github.com/bioinplant/PCmaster/blob/main/PCmaster_anno/celltype-true.png)
+#### Cell type pred ####
+![image](https://github.com/bioinplant/PCmaster/blob/main/PCmaster_anno/celltype-pred.png)
+
+#### Simple usage (auto annotation with the marker gene list)  ####
+```
+# Other files such as PCmaster_anno_0_23_11_11.py, plant_marker_gene_list.txt and the pth file of resnet in this git project are also needed
+# More guides in PCmaster_anno_0_guide_1_mainly_in_Chinese.docx
+# More details in PCmaster_anno_0_spatial_resnet_all_genes_slice367_ref_slice_1_test_23_10_8-Copy1.ipynb
+# one example of the_adata:
+# AnnData object with n_obs × n_vars = 13713 × 10960
+# Please pay attention to the gene name format in plant_marker_gene_list.txt.
+# 'anndata', 'organ' and 'species' are needed. 
+
+with open('PCmaster_anno_0_23_11_11.py','r',encoding='utf-8') as f:
+    exec(f.read())
+pcma = PCmaster_anno_0()
+pcma.to_annotation_0(anndata=the_adata,organ='seed',species='Oryza Sativa',
+                    )
+```
+#### Annotation with the marker gene list ####
+![image](https://github.com/bioinplant/PCmaster/blob/main/PCmaster_anno/celltype-pred.png)
+
 ---
 #### [2023-11-08] ####
 #### PCmaster_anno_0_23_11_8.py has been uploaded. Code annotation is improved.  ####
@@ -117,33 +189,7 @@ pcma.auto_annotation_with_deep_learning_0(original_obj=the_original_obj,gpu_code
                                           num_workers = the_num_workers
                                           )
 ```
-```
-On the test dataset
-Accuracy: 0.9025
-Macro Precision: 0.901893589299713
-Macro Recall: 0.9025
-Macro F1 Score: 0.9016473881006721
 
-On a dataset which is not involved in model training
-Accuracy: 0.6825028968713789
-Macro Precision: 0.7359756337721365
-Macro Recall: 0.6869098209694935
-Macro F1 Score: 0.6703407567251473
-
-The score is higher than SingleR
-[1] "obj"
-An object of class Seurat 
-5859 features across 7462 samples within 1 assay 
-Active assay: RNA (5859 features, 0 variable features)
-[1] 100
-[1] "count/length(big_df$true)"
-[1] 0.5844504
-
-```
-#### Cell type true ####
-![image](https://github.com/bioinplant/PCmaster/blob/main/celltype-true.png)
-#### Cell type pred ####
-![image](https://github.com/bioinplant/PCmaster/blob/main/celltype-pred.png)
 ---
 #### [2023-09-11] ####
 #### PCmaster_anno_0_23_9_11.py has been uploaded. The default 'cluster_n_neighbors' has been changed from 20 to 10, which is the same as scanpy. And the function of auto annotation with reference datasets has been improved. You can experience improved functions by replacing old contents in original files with new contents.  ####
