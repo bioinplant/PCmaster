@@ -14,6 +14,8 @@ PCmaster_seg: Plant Cell master for cell segment of embyro/leaf/...
 ### PCmaster_anno ###
 ### Version 1.0.0 ###
 
+# For PCmaster_anno (v.1.0.0), Miniconda3 (v.23.7.3), Jupyter (v.1.0.0) and Python (v.3.8.16) are utilized to build the analysis platform on CentOS Linux (release 7.4.1708) with one NVIDIA Tesla V100-SXM2-32GB GPU (also workable on Windows with one NVIDIA GeForce RTX 3080 Laptop GPU). D2l (Zhang et al., 2024) (v.0.17.6), Numpy (v.1.23.5), Pandas (v.2.0.3), SCANPY (Wolf et al., 2018) (v.1.9.2), Scikit-learn (Pedregosa et al., 2011) (v.1.2.1), Torch (v.1.13.1) and their dependent packages are mainly used for analysis and annotation. Matplotlib (v.3.5.3), Plotly (v.5.9.0), Plottable (v.0.1.5), Seaborn (v.0.13.2) and their dependent packages are mainly utilized for visualization.
+
 ---
 #### [2023-11-30] ####
 #### PCmaster_anno_0_23_11_12.py has been uploaded. Some functions have been improved.  ####
