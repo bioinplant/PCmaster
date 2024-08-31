@@ -23,7 +23,7 @@ For PCmaster_anno (v.1.0.0), Miniconda3 (v.23.7.3), Jupyter (v.1.0.0) and Python
      To-do list:
      1, optimized annotation function.
      2, tutorial.
-     3, README.  ####
+     3, README.  
 ---
 #### [2023-11-30] ####
 #### PCmaster_anno_0_23_11_12.py has been uploaded. Some functions have been improved.  ####
