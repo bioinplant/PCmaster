@@ -2,10 +2,7 @@
 Plant Cell master    
     
 Available now：    
-PCmaster_anno: Plant Cell master for automatic annotation of cell types    
-    
-In preparation：    
-PCmaster_seg: Plant Cell master for cell segment of embyro/leaf/...    
+PCmaster_anno: Plant Cell master for automatic annotation of cell types      
 
 #### ####
 #### ####
@@ -14,97 +11,8 @@ PCmaster_seg: Plant Cell master for cell segment of embyro/leaf/...
 #### ####
 ### PCmaster_anno ###
 ### Version 1.0.0 ###
-
-For PCmaster_anno (v.1.0.0), Miniconda3 (v.23.7.3), Jupyter (v.1.0.0) and Python (v.3.8.16) are utilized to build the analysis platform on CentOS Linux (release 7.4.1708) with one NVIDIA Tesla V100-SXM2-32GB GPU (also workable on Windows with one NVIDIA GeForce RTX 3080 Laptop GPU). D2l (v.0.17.6), Numpy (v.1.23.5), Pandas (v.2.0.3), SCANPY (v.1.9.2), Scikit-learn (v.1.2.1), Torch (v.1.13.1) and their dependent packages are mainly used for analysis and annotation. Matplotlib (v.3.5.3), Plotly (v.5.9.0), Plottable (v.0.1.5), Seaborn (v.0.13.2) and their dependent packages are mainly utilized for visualization.
-
 ---
-#### [2024-08-31] ####
-#### Updating. 
-     To-do list:
-     1, optimized annotation function.
-     2, tutorial.
-     3, README.  
----
-#### [2023-11-30] ####
-#### PCmaster_anno_0_23_11_12.py has been uploaded. Some functions have been improved.  ####
----
-#### [2023-11-21] ####
-#### Simple usage (auto annotation with ref datasets and deep learning models)  ####
-```
-# Other files such as PCmaster_anno_0_23_10_3.py, plant_marker_gene_list.txt and the pth file of resnet in this git project are also needed
-# More guides in PCmaster_anno_0_guide_1_mainly_in_Chinese.docx
-# More details in PCmaster_anno_0_spatial_resnet_all_genes_slice367_ref_slice_1_test_23_10_8-Copy1.ipynb
-# one example of original_obj:
-# AnnData object with n_obs × n_vars = 13713 × 10960
-# In original_obj.obs, 'ref_test_label', 'cellname' and 'celltype' are needed.
-# For ref data, 'ref_test_label' is 'ref'.
-# For test data, 'ref_test_label' is 'test', 'celltype' is 'Unknown'.
-# The following code will train a model based on ref data, and then annotate test data based on the model.
-
-with open('PCmaster_anno_0_23_10_3.py','r') as f:
-    exec(f.read())
-pcma = PCmaster_anno_0()
-pcma.auto_annotation_with_deep_learning_0(original_obj=the_original_obj,gpu_code = gpu_code_n,
-                                          learning_rate=the_learning_rate,
-                                          epochs=the_epochs,
-                                          batch_size = the_batch_size,dropout = the_dropout,
-                                          num_workers = the_num_workers
-                                          )
-```
-```
-On the test dataset
-Accuracy: 0.9025
-Macro Precision: 0.901893589299713
-Macro Recall: 0.9025
-Macro F1 Score: 0.9016473881006721
-
-On a dataset which is not involved in model training
-Accuracy: 0.6825028968713789
-Macro Precision: 0.7359756337721365
-Macro Recall: 0.6869098209694935
-Macro F1 Score: 0.6703407567251473
-
-The score is higher than SingleR
-[1] "obj"
-An object of class Seurat 
-5859 features across 7462 samples within 1 assay 
-Active assay: RNA (5859 features, 0 variable features)
-[1] 100
-[1] "count/length(big_df$true)"
-[1] 0.5844504
-
-```
-#### Cell type true ####
-![image](https://github.com/bioinplant/PCmaster/blob/main/PCmaster_anno/celltype-true.png)
-#### Cell type pred ####
-![image](https://github.com/bioinplant/PCmaster/blob/main/PCmaster_anno/celltype-pred.png)
-
-#### Simple usage (auto annotation with the marker gene list)  ####
-```
-# Other files such as PCmaster_anno_0_23_11_11.py, plant_marker_gene_list.txt and the pth file of resnet in this git project are also needed
-# More guides in PCmaster_anno_0_guide_1_mainly_in_Chinese.docx
-# More details in PCmaster_anno_0_spatial_resnet_all_genes_slice367_ref_slice_1_test_23_10_8-Copy1.ipynb
-# one example of the_adata:
-# AnnData object with n_obs × n_vars = 13713 × 10960
-# Please pay attention to the gene name format in plant_marker_gene_list.txt.
-# 'anndata', 'organ' and 'species' are needed. 
-
-with open('PCmaster_anno_0_23_11_11.py','r',encoding='utf-8') as f:
-    exec(f.read())
-pcma = PCmaster_anno_0()
-pcma.to_annotation_0(anndata=the_adata,organ='seed',species='Oryza Sativa',
-                    )
-```
-#### Annotation with the marker gene list ####
-![image](https://github.com/bioinplant/PCmaster/blob/main/PCmaster_anno/anno_re_using_marker_gene_list.png)
-
----
-#### [2023-11-08] ####
-#### PCmaster_anno_0_23_11_8.py has been uploaded. Code annotation is improved.  ####
----
-#### [2023-10-22] ####
-#### PCmaster_anno_0_23_10_22.py has been uploaded. The function of calculating macro F1-score has been added. And the location of trainDataset and validDataset has been improved. You can experience improved functions by replacing old contents in original files with new contents.  ####
-#### Complete installation ####
+#### Installation ####
 ```
 # The versions may not be exactly the same.
 # Please install conda first
@@ -156,23 +64,6 @@ conda install -c conda-forge conda-pack
 # pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 
 ```
----
-#### [2023-10-08] ####
-#### Installation with TOSICA  ####
-```
-# Please install conda first
-conda create -n pcmaster_anno_0 --offline
-conda activate pcmaster_anno_0
-conda install -c conda-forge python=3.8 scanpy
-conda install pytorch=1.7.1 torchvision=0.8.2 torchaudio=0.7.2 cudatoolkit=10.1 -c pytorch
-# Download TOSICA-main from https://github.com/JackieHanLab/TOSICA
-cd TOSICA-main
-pip install .
-pip install d2l jupyter==1.0.0
-python -m ipykernel install --user --name=pcmaster_anno_0 --display-name='Environment (pcmaster_anno_0)'
-jupyter-notebook --ip=xxx.yyy.zzz.aaa --no-browser
-# Open the web browser and go to http://xxx.yyy.zzz.aaa:cccc or https://xxx.yyy.zzz.aaa:cccc
-```
 #### Installation with docker  ####
 ```
 # Please install docker first
@@ -187,46 +78,15 @@ conda activate pcmaster_anno_0
 jupyter-notebook --ip=xxx.yyy.zzz.aaa --no-browser
 # Open the web browser and go to http://xxx.yyy.zzz.aaa:8996 or https://xxx.yyy.zzz.aaa:8996
 ```
-#### Simple usage (auto annotation with ref datasets and deep learning models)  ####
-```
-# Other files such as PCmaster_anno_0_23_10_3.py, plant_marker_gene_list.txt and the pth file of resnet in this git project are also needed
-# More guides in PCmaster_anno_0_guide_1_mainly_in_Chinese.docx
-# More details in PCmaster_anno_0_spatial_resnet_all_genes_slice367_ref_slice_1_test_23_10_8-Copy1.ipynb
-with open('PCmaster_anno_0_23_10_3.py','r') as f:
-    exec(f.read())
-pcma = PCmaster_anno_0()
-pcma.auto_annotation_with_deep_learning_0(original_obj=the_original_obj,gpu_code = gpu_code_n,
-                                          learning_rate=the_learning_rate,
-                                          epochs=the_epochs,
-                                          batch_size = the_batch_size,dropout = the_dropout,
-                                          num_workers = the_num_workers
-                                          )
-```
-
 ---
-#### [2023-09-11] ####
-#### PCmaster_anno_0_23_9_11.py has been uploaded. The default 'cluster_n_neighbors' has been changed from 20 to 10, which is the same as scanpy. And the function of auto annotation with reference datasets has been improved. You can experience improved functions by replacing old contents in original files with new contents.  ####
+#### Usage ####
+#### See ipynbs in 'Tmp_tutorial' ####
 ---
-#### [2023-08-15] ####
-#### PCmaster_anno_0_23_8_15.py and plant_marker_gene_list_23_8_15.txt have been uploaded. You can experience improved functions by replacing old contents in original files with new contents.  ####
----
-#### [2023-07-05] ####
-#### Currently, it is recommended to follow the guidance in PCmaster_anno_0_guide_1_mainly_in_Chinese.docx and install the environment from scratch. ####
-#### Installing via requirements.txt seems to have compatibility issues at the moment. (It seems to be affected by conda version and network environment, too.) ####
-#### Installing through the compressed file PCmaster_anno_test_1.tar.gz (There are also guides in PCmaster_anno_0_guide_1_mainly_in_Chinese.docx.) via [this link](https://pan.baidu.com/s/1p1im8oCfebzGjzptk7PSmQ?pwd=nnvr) is the most convenient way, but there may also be compatibility issues. ####
----
-#### [2023-06-05] ####
-#### It is recommended to put your ipynb, "PCmaster/PCmaster_anno/PCmaster_anno_0_copy1.py" and "PCmaster/PCmaster_anno/plant_marker_gene_list.txt" into the same folder. ####
----      
-#### If you don't want to reinstall the conda environment from scratch, you can download the compressed package through [this link](https://pan.baidu.com/s/1p1im8oCfebzGjzptk7PSmQ?pwd=nnvr), which also contains some files and codes that can be used for testing. ####
-#### You can temporarily get some instructions through "PCmaster/PCmaster_anno/PCmaster_anno_0_guide_1_mainly_in_Chinese.docx". We are trying to make a guide website. #### 
-You can see some analysis examples in "PCmaster/PCmaster_anno/PCmaster_anno_example_1.ipynb".    
-If you want to use the latest version, please download the latest 'PCmaster_anno_0_XX_XX_XX.py' file and copy the code in it to replace the code in 'PCmaster_anno_0_copy1.py'.    
-Please note that the latest version of the code may cause some undetected bugs.     
-
 SCAPP is the old version of PCmaster_anno.    
 https://github.com/shlin0415/SCAPP    
 
-Sincerely thanks to the contributors of packages such as d2l, doubletdetection, harmonypy, numpy, openmmlab, pandas, scanpy, seaborn, scrublet, scikit-learn, singler, torch, tosica, etc.    
+For PCmaster_anno (v.1.0.0), Miniconda3 (v.23.7.3), Jupyter (v.1.0.0) and Python (v.3.8.16) are utilized to build the analysis platform on CentOS Linux (release 7.4.1708) with one NVIDIA Tesla V100-SXM2-32GB GPU (also workable on Windows with one NVIDIA GeForce RTX 3080 Laptop GPU). D2l (v.0.17.6), Numpy (v.1.23.5), Pandas (v.2.0.3), SCANPY (v.1.9.2), Scikit-learn (v.1.2.1), Torch (v.1.13.1) and their dependent packages are mainly used for analysis and annotation. Matplotlib (v.3.5.3), Plotly (v.5.9.0), Plottable (v.0.1.5), Seaborn (v.0.13.2) and their dependent packages are mainly utilized for visualization.
 
-If you have some questions, please send email to 12216017@zju.edu.cn.    
+Sincerely thanks to the contributors of these packages: ciform, conda, d2l, docker, doubletdetection, harmonypy, jupyter, matplotlib, nrtpredictor, numpy, openmmlab, pandas, plotly, plottable, python, scanpy, scgpt, scikit-learn, scplant, scrublet, seaborn, seurat, singler, torch, tosica, etc.
+
+If you have some questions, please send email to 12216017@zju.edu.cn.
