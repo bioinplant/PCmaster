@@ -80,7 +80,8 @@ jupyter-notebook --ip=xxx.yyy.zzz.aaa --no-browser
 ```
 ---
 #### Usage ####
-#### See ipynbs in 'Tmp_tutorial' ####
+#### See ipynbs in 'Tmp_tutorial'. ####
+#### The refrence datasets can be downloaded from CNGBdb (https://db.cngb.org/), EBI, NCBI, scPlantDB (https://biobigdata.nju.edu.cn/scplantdb/dataset) and STOmics DB (https://db.cngb.org/stomics/). ####
 ---
 SCAPP is the old version of PCmaster_anno.    
 https://github.com/shlin0415/SCAPP    
