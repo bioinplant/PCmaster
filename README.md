@@ -89,4 +89,4 @@ For PCmaster_anno (v.1.0.0), Miniconda3 (v.23.7.3), Jupyter (v.1.0.0) and Python
 
 Sincerely thanks to the contributors of these packages: ciform, conda, d2l, docker, doubletdetection, harmonypy, jupyter, matplotlib, nrtpredictor, numpy, openmmlab, pandas, plotly, plottable, python, scanpy, scgpt, scikit-learn, scplant, scrublet, seaborn, seurat, singler, torch, tosica, etc.
 
-If you have some questions, please send email to 12216017@zju.edu.cn.
+If you have any questions, please send the email to 12216017@zju.edu.cn.
