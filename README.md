@@ -82,6 +82,7 @@ jupyter-notebook --ip=xxx.yyy.zzz.aaa --no-browser
 #### Usage ####
 #### See ipynbs in 'Tmp_tutorial'. ####
 #### The refrence datasets can be downloaded from CNGBdb (https://db.cngb.org/), EBI, NCBI, scPlantDB (https://biobigdata.nju.edu.cn/scplantdb/dataset) and STOmics DB (https://db.cngb.org/stomics/). ####
+#### The 'resnet18.pth' can be downloaded from https://drive.google.com/file/d/1dZful0MsOm73hodk2Nt1zBV7li7Ypmhb/view?usp=drive_link. ####
 ---
 SCAPP is the old version of PCmaster_anno.    
 https://github.com/shlin0415/SCAPP    
