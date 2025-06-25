@@ -90,5 +90,4 @@ https://github.com/shlin0415/SCAPP
 For PCmaster_anno (v.1.0.0), Miniconda3 (v.23.7.3), Jupyter (v.1.0.0) and Python (v.3.8.16) are utilized to build the analysis platform on CentOS Linux (release 7.4.1708) with one NVIDIA Tesla V100-SXM2-32GB GPU (also workable on Windows with one NVIDIA GeForce RTX 3080 Laptop GPU). D2l (v.0.17.6), Numpy (v.1.23.5), Pandas (v.2.0.3), SCANPY (v.1.9.2), Scikit-learn (v.1.2.1), Torch (v.1.13.1) and their dependent packages are mainly used for analysis and annotation. Matplotlib (v.3.5.3), Plotly (v.5.9.0), Plottable (v.0.1.5), Seaborn (v.0.13.2) and their dependent packages are mainly utilized for visualization.
 
 Sincerely thanks to the contributors of these packages: cell blast, ciform, conda, d2l, docker, doubletdetection, harmonypy, jupyter, matplotlib, nrtpredictor, numpy, openmmlab, pandas, plotly, plottable, python, scanpy, scgpt, scikit-learn, scplant, scrublet, scvi, seaborn, seurat, singler, torch, tosica, etc.
-
-If you have any questions, please send the email to 12216017@zju.edu.cn.
+If you have any questions, please send the email to 1378292252@qq.com (usually faster) / 3180104132@zju.edu.cn.
