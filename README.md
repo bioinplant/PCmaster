@@ -14,8 +14,8 @@ PCmaster_anno: Plant Cell master for automatic annotation of cell types
 ---
 #### Installation ####
 ```
-# The versions may not be exactly the same.
-# Please install conda first
+# If there are env problems, please try install with the proper version, especially for d2l (0.17.6), numpy (1.23.5) and pandas (2.0.3).
+# Please install conda first.
 conda create -n PCmaster_anno_0 --offline
 conda activate PCmaster_anno_0
 conda install python=3.8
