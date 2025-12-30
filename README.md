@@ -67,6 +67,7 @@ conda install -c conda-forge conda-pack
 ```
 #### Installation with docker  ####
 ```
+# This way may be slow and not easy for file operation
 # Please install docker first
 # Download the docker image file from https://drive.google.com/file/d/1236fiXdtY4WwtrU3zPVqE-eJcJf5m5vI/view?usp=drive_link
 docker load --input bioinplant_pcmaster_anno_0_23_9_28.tar
